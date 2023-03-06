@@ -2,7 +2,7 @@ import requests
 import pygame
 import googlemaps
 
-api_key = 'YOUR_API_KEY'
+api_key = 'AIzaSyAuUqm6atdaFjkBmo3k9pge86qH31am1FU'
 phone_number = input("Masukkan nomor telepon yang ingin dilacak: ")
 
 def show_matrix(screen):
