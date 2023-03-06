@@ -1,10 +1,14 @@
 import requests
 
+import pygame
+
 import googlemaps
 
 api_key = 'YOUR_API_KEY'
 
 phone_number = '6281236022306'
+
+def show_matrix(screen): font = pygame.font.SysFont('Consolas', 20) text = font.render("iclone_Rfe", True, (0, 255, 0)) screen.blit(text, (0, 0)) for i in range(40): for event in pygame.event.get(): if event.type == pygame.QUIT: pygame.quit() quit() screen.fill((0, 0, 0)) for j in range(i): text = font.render("010101010101010101010101010101010101010101010101010101010101010101", True, (0, 255, 0)) screen.blit(text, (0, j*12)) pygame.display.flip() pygame.time.wait(50)
 
 def locate_phone(api_key, phone_number):
 
@@ -42,7 +46,11 @@ def locate_phone(api_key, phone_number):
 
         print(f'Phone {phone_number} is at ({location["lat"]}, {location["lng"]}), accuracy: {accuracy} meters')
 
-        # Reverse geocoding to get the address
+        #memulai matrix
+        
+        def main(): pygame.init() pygame.display.set_caption("Matrix") screen = pygame.display.set_mode((600, 400)) show_matrix(screen) locate_phone(api_key, phone_number) pygame.quit() if __name__ == "__main__": main()
+      
+    # Reverse geocoding to get the address
 
         gmaps = googlemaps.Client(api_key)
 
