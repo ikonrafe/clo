@@ -16,14 +16,15 @@ def show_matrix(screen):
                 quit()
         screen.fill((0, 0, 0))
         font_name = pygame.font.SysFont('Consolas', 30)
-text_name = font_name.render("iclone_RFE", True, (255, 0, 0))
-screen.blit(text_name, (20, 20))
+        text_name = font_name.render("iclone_RFE", True, (255, 0, 0))
+        screen.blit(text_name, (20, 20))
 
         for j in range(i):
-    text = font.render("010101010101010101010101010101010101010101010101010101010101010101", True, (0, 255, 0))
-    screen.blit(text, (0, j*12))
-pygame.display.flip()
-pygame.time.wait(50)
+            text = font.render("010101010101010101010101010101010101010101010101010101010101010101", True, (0, 255, 0))
+            screen.blit(text, (0, j*12))
+        pygame.display.flip()
+        pygame.time.wait(50)
+
 
 def locate_phone(api_key, phone_number):
     url = 'https://www.googleapis.com/geolocation/v1/geolocate?key={}'.format(api_key)
