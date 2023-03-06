@@ -3,7 +3,7 @@ import pygame
 import googlemaps
 
 api_key = 'YOUR_API_KEY'
-phone_number = '6281236022306'
+phone_number = input("Masukkan nomor telepon yang ingin dilacak: ")
 
 def show_matrix(screen):
     font = pygame.font.SysFont('Consolas', 20)
