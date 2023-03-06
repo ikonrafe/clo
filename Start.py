@@ -18,8 +18,7 @@ def show_matrix(screen):
         font_name = pygame.font.SysFont('Consolas', 30)
 text_name = font_name.render("iclone_RFE", True, (255, 0, 0))
 screen.blit(text_name, (20, 20))
-
-        for j in range(i):
+ for j in range(i):
     text = font.render("010101010101010101010101010101010101010101010101010101010101010101", True, (0, 255, 0))
     screen.blit(text, (0, j*12))
 pygame.display.flip()
